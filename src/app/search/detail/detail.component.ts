@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnDestroy } from '@angular/core';
 
-import { SwapiService } from '../swapi.service';
-import { BingImageService } from '../bing-image.service';
+import { SwapiService } from '../../swapi.service';
+import { BingImageService } from '../../bing-image.service';
 
 
 @Component({

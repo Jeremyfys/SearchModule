@@ -3,10 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 
 const routes: Routes = [
-  {path: '', component: LayoutComponent, children: [
-    {path: '', loadChildren: '../search/search.module#SearchModule'},
-    {path: 'detail', loadChildren: '../detail/detail.module#DetailModule'}
-  ]}
+  {
+    path: '', component: LayoutComponent, children: [
+      { path: '', loadChildren: '../search/search.module#SearchModule' }
+    ]
+  }
 ];
 
 @NgModule({

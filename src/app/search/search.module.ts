@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchRoutingModule } from './search-routing.module';
-import { SearchComponent } from './search.component';
-import { DetailModule } from '../detail/detail.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgmaterialModule } from '../ngmaterial.module';
 
 import { SwapiService } from '../swapi.service';
+import { BingImageService } from '../bing-image.service';
+
+import { DetailComponent } from './detail/detail.component';
+import { SearchComponent } from './search.component';
 
 
 @NgModule({
@@ -15,10 +17,9 @@ import { SwapiService } from '../swapi.service';
     SearchRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgmaterialModule,
-    DetailModule
+    NgmaterialModule
   ],
-  declarations: [SearchComponent],
-  providers: [SwapiService]
+  declarations: [SearchComponent, DetailComponent],
+  providers: [SwapiService, BingImageService]
 })
 export class SearchModule { }
